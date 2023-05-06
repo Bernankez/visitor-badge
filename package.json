@@ -1,18 +1,18 @@
 {
-  "name": "ts-template",
+  "name": "visitor-badge",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.4.0",
   "description": "",
   "author": "Cole <bernankez@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/bernankez/TSTemplate#readme",
+  "homepage": "https://github.com/Bernankez/visitor-badge#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bernankez/TSTemplate.git"
+    "url": "git+https://github.com/Bernankez/visitor-badge.git"
   },
-  "bugs": "https://github.com/bernankez/TSTemplate/issues",
-  "keywords": [],
+  "bugs": "https://github.com/Bernankez/visitor-badge/issues",
+  "keywords": ["visitor-badge"],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -38,9 +38,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "unbuild",
-    "dev": "unbuild --stub",
+    "dev": "tsx --watch src/index.ts",
     "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish --access public",
+    "release": "bumpp",
     "start": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",

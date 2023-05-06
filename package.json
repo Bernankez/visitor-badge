@@ -51,6 +51,11 @@
     "format": "eslint . --fix",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "c12": "^1.4.1",
+    "h3": "^1.6.5",
+    "mongoose": "^7.1.0"
+  },
   "devDependencies": {
     "@bernankez/eslint-config": "^0.4.3",
     "@types/node": "^18.16.1",
@@ -68,8 +73,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "dependencies": {
-    "h3": "^1.6.5"
   }
 }

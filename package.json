@@ -12,7 +12,9 @@
     "url": "git+https://github.com/Bernankez/visitor-badge.git"
   },
   "bugs": "https://github.com/Bernankez/visitor-badge/issues",
-  "keywords": ["visitor-badge"],
+  "keywords": [
+    "visitor-badge"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -66,5 +68,8 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "dependencies": {
+    "h3": "^1.6.5"
   }
 }

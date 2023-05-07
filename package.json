@@ -55,7 +55,8 @@
     "c12": "^1.4.1",
     "consola": "^3.1.0",
     "h3": "^1.6.5",
-    "mongoose": "^7.1.0"
+    "mongoose": "^7.1.0",
+    "node-cache": "^5.1.2"
   },
   "devDependencies": {
     "@bernankez/eslint-config": "^0.4.3",

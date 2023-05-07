@@ -1,4 +1,5 @@
 import type { RequestHeaders } from "h3";
+import { setCache } from "../cache";
 import { Counter } from "./schema";
 import { generateHash } from "./hash";
 
@@ -9,5 +10,6 @@ export async function increment(namespace: string, key: string, headers: Request
     { new: true, upsert: true },
   );
   await counter.increment(headers);
+  setCache(namespace, key, counter.count);
   return counter.count;
 }

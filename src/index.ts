@@ -4,6 +4,7 @@ import consola from "consola";
 import { connect } from "./database/connect";
 import { Counter, Log } from "./database/schema";
 import { increment } from "./database/service";
+import { getCache } from "./cache";
 
 async function initWebServer() {
   const app = createApp();
@@ -35,9 +36,19 @@ async function initWebServer() {
         statusMessage: "key is required",
       });
     }
-    // TODO check referer to decide whether to increment
-    // if not, return 401
-    // TODO node-cache for 10 seconds
+    const count = getCache<number>(namespace, key);
+    if (count) { return count; }
+    const referer = headers.referer;
+    if (referer) {
+      const refererUrl = new URL(referer);
+      const hostname = refererUrl.hostname.replace("www.", "");
+      if (namespace !== hostname) {
+        throw createError({
+          statusCode: 401,
+          statusMessage: "unauthorized",
+        });
+      }
+    }
     return await increment(namespace, key, headers);
   }));
 

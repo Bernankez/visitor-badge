@@ -10,4 +10,9 @@ export default defineConfig({
   loader: {
     ".svg": "dataurl",
   },
+  outExtension({ format }) {
+    return {
+      js: `.${format === "cjs" ? "js" : format}`,
+    };
+  },
 });

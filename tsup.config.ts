@@ -6,6 +6,11 @@ export default defineConfig({
   format: ["cjs", "esm"],
   shims: true,
   dts: true,
+  minify: true,
+  treeshake: true,
+  loader: {
+    ".svg": "dataurl",
+  },
   outExtension({ format }) {
     return {
       js: `.${format === "esm" ? "mjs" : format}`,

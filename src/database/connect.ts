@@ -1,6 +1,6 @@
 import type { Mongoose } from "mongoose";
 import mongoose from "mongoose";
-import { loadConfig } from "../load-config";
+import { loadConfig } from "../utils/load-config";
 
 let globalMongoose: Mongoose | undefined;
 

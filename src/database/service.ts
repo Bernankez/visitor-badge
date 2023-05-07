@@ -1,5 +1,5 @@
 import type { RequestHeaders } from "h3";
-import { setCache } from "../cache";
+import { setCache } from "../utils/cache";
 import { Counter } from "./schema";
 import { generateHash } from "./hash";
 

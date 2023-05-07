@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "unbuild",
+    "build": "tsup",
     "dev": "tsx --watch src/index.ts",
     "prepublishOnly": "npm run build",
     "release": "bumpp",
@@ -68,9 +68,9 @@
     "node-cache": "^5.1.2",
     "rimraf": "^5.0.0",
     "svgdom": "^0.1.14",
+    "tsup": "^6.7.0",
     "tsx": "^3.12.6",
     "typescript": "^5.0.4",
-    "unbuild": "^1.2.1",
     "vite": "^4.3.3",
     "vitest": "^0.30.1"
   },

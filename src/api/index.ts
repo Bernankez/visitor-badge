@@ -1,6 +1,8 @@
-import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
+import { createError, createRouter as createRouterH3, eventHandler, getHeaders, setHeader } from "h3";
+import { isDefined } from "@bernankez/utils";
 import { getCache } from "../utils/cache";
 import { increment } from "../database/service";
+import { renderSVG } from "../utils/renderSVG";
 
 export function createRouter() {
   const router = createRouterH3().get("/api/**", eventHandler(async (event) => {
@@ -17,20 +19,24 @@ export function createRouter() {
         statusMessage: "key is required",
       });
     }
-    const count = getCache<number>(namespace, key);
-    if (count) { return count; }
-    const referer = headers.referer;
-    if (referer) {
-      const refererUrl = new URL(referer);
-      const hostname = refererUrl.hostname.replace("www.", "");
-      if (namespace !== hostname) {
-        throw createError({
-          statusCode: 401,
-          statusMessage: "unauthorized",
-        });
+    let count: number | undefined;
+    count = getCache<number>(namespace, key);
+    if (!isDefined(count)) {
+      const referer = headers.referer;
+      if (referer) {
+        const refererUrl = new URL(referer);
+        const hostname = refererUrl.hostname.replace("www.", "");
+        if (namespace !== hostname) {
+          throw createError({
+            statusCode: 401,
+            statusMessage: "unauthorized",
+          });
+        }
       }
+      count = await increment(namespace, key, headers);
     }
-    return await increment(namespace, key, headers);
+    setHeader(event, "Content-Type", "image/svg+xml");
+    return renderSVG(count);
   }));
   return router;
 }

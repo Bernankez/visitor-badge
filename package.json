@@ -52,11 +52,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@bernankez/utils": "^0.2.2",
+    "@svgdotjs/svg.js": "^3.1.2",
     "c12": "^1.4.1",
     "consola": "^3.1.0",
     "h3": "^1.6.5",
     "mongoose": "^7.1.0",
-    "node-cache": "^5.1.2"
+    "node-cache": "^5.1.2",
+    "svgdom": "^0.1.14"
   },
   "devDependencies": {
     "@bernankez/eslint-config": "^0.4.3",

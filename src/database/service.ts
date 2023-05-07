@@ -1,7 +1,7 @@
 import type { RequestHeaders } from "h3";
 import { setCache } from "../utils/cache";
+import { generateHash } from "../utils/hash";
 import { Counter } from "./schema";
-import { generateHash } from "./hash";
 
 export async function increment(namespace: string, key: string, headers: RequestHeaders) {
   const counter = await Counter.findOneAndUpdate(

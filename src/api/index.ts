@@ -1,8 +1,9 @@
-import { createError, createRouter as createRouterH3, eventHandler, getHeaders, setHeader } from "h3";
+import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
 import { isDefined } from "@bernankez/utils";
 import { getCache } from "../utils/cache";
 import { increment } from "../database/service";
 import { renderSVG } from "../utils/renderSVG";
+import { handleHeader } from "../utils/header";
 
 export function createRouter() {
   const router = createRouterH3().get("/api/**", eventHandler(async (event) => {
@@ -24,6 +25,8 @@ export function createRouter() {
     if (!isDefined(count)) {
       const referer = headers.referer;
       if (referer) {
+        // namespace need to fit hostname
+        // eg. www.example.com. namespace should be example.com
         const refererUrl = new URL(referer);
         const hostname = refererUrl.hostname.replace("www.", "");
         if (namespace !== hostname) {
@@ -35,7 +38,7 @@ export function createRouter() {
       }
       count = await increment(namespace, key, headers);
     }
-    setHeader(event, "Content-Type", "image/svg+xml");
+    handleHeader(event);
     return renderSVG(count);
   }));
   return router;

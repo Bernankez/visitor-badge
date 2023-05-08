@@ -23,10 +23,13 @@ export function renderSVG(count: number) {
 
   const canvas = (SVG(document.documentElement) as Svg);
   const text = canvas.plain(`Visited: ${count} times`);
-  text.font({
+  text.attr({
+    // see https://www.zhihu.com/question/58620241
+    style: "dominant-baseline: middle",
+  }).font({
     family: "DejaVu Sans,Verdana,Geneva,sans-serif",
     size: 16,
-  }).move(70, 28);
+  }).move(70, 38);
 
   const avatar = resolveAvatar();
 

@@ -24,10 +24,13 @@ function renderSVG(count) {
   (0, _svg.registerWindow)(window, document);
   const canvas = (0, _svg.SVG)(document.documentElement);
   const text = canvas.plain(`Visited: ${count} times`);
-  text.font({
+  text.attr({
+    // see https://www.zhihu.com/question/58620241
+    style: "dominant-baseline: middle"
+  }).font({
     family: "DejaVu Sans,Verdana,Geneva,sans-serif",
     size: 16
-  }).move(70, 28);
+  }).move(70, 38);
   const avatar = (0, _avatar.resolveAvatar)();
   return render([avatar, text.node.outerHTML], 210, 64);
 }

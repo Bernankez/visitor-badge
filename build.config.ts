@@ -2,9 +2,15 @@ import { defineBuildConfig } from "unbuild";
 
 export default defineBuildConfig({
   entries: [
-    "src/index",
+    {
+      builder: "mkdist",
+      input: "./src",
+      outDir: "./dist",
+      format: "cjs",
+      ext: "cjs",
+    },
   ],
-  declaration: true,
+  declaration: false,
   clean: true,
   rollup: {
     emitCJS: true,

@@ -78,19 +78,19 @@ pnpm dev
 
 很大概率你需要改动这些文件以适应自己的需求。
 
-[api/index.ts](./src/api.index.ts)包含路由，namespace+key的合法性验证。
+[api/index.ts](./src/api.index.ts) 包含路由，namespace + key的合法性验证。
 
-[assets](./src/assets)svg头像。
+[assets](./src/assets) svg头像。
 
-[database](./src/database)数据库部分。
+[database](./src/database) 数据库部分。
 
-[utils/avatar.ts](./src/utils/avatar.ts)svg头像渲染字符串。
+[utils/avatar.ts](./src/utils/avatar.ts) svg头像渲染字符串。
 
-[utils/cache.ts](./src/utils/cache.ts)缓存时间设置。
+[utils/cache.ts](./src/utils/cache.ts) 缓存时间设置。
 
-[utils/renderSVG.ts](./src/utils/renderSVG.ts)渲染Badge。
+[utils/renderSVG.ts](./src/utils/renderSVG.ts) 渲染Badge。
 
-[utils/load-config](./src/utils/load-config).env文件处理。
+[utils/load-config](./src/utils/load-config) .env文件处理。
 
 ## 参考文档
 

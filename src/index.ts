@@ -25,7 +25,7 @@ async function initWebServer() {
   const router = createRouter();
   app.use(router);
 
-  createServer(toNodeListener(app)).listen(process.env.PORT || 3000);
+  createServer(toNodeListener(app)).listen(process.env.PORT || 443);
 }
 
 initWebServer();

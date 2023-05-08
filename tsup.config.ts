@@ -9,7 +9,7 @@ export default defineConfig({
   minify: true,
   treeshake: true,
   loader: {
-    ".svg": "dataurl",
+    ".svg": "base64",
   },
   outExtension({ format }) {
     return {

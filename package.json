@@ -30,7 +30,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "eslint . --fix",
+    "fix": "eslint . --fix",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -46,6 +46,7 @@
   "devDependencies": {
     "@bernankez/eslint-config": "^0.4.3",
     "@types/node": "^18.16.1",
+    "@vercel/node": "^2.14.1",
     "bumpp": "^9.1.0",
     "changelogithub": "^0.12.9",
     "eslint": "^8.39.0",

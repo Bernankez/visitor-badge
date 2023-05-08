@@ -56,7 +56,6 @@
     "@bernankez/utils": "^0.2.2",
     "@svgdotjs/svg.js": "^3.1.2",
     "@types/node": "^18.16.1",
-    "@vercel/node": "^2.14.1",
     "bumpp": "^9.1.0",
     "c12": "^1.4.1",
     "changelogithub": "^0.12.9",

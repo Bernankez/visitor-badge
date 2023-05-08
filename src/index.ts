@@ -6,7 +6,6 @@ import { Counter, Log } from "./database/schema";
 import { createRouter } from "./api";
 
 async function initWebServer() {
-  consola.success("starting web server");
   const app = createApp();
 
   const mongodb = await connect();

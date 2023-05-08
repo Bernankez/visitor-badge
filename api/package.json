@@ -1,0 +1,19 @@
+{
+  "name": "visitor-badge",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.4.0",
+  "description": "",
+  "author": "Cole <bernankez@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Bernankez/visitor-badge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bernankez/visitor-badge.git"
+  },
+  "bugs": "https://github.com/Bernankez/visitor-badge/issues",
+  "keywords": [
+    "visitor-badge"
+  ],
+  "sideEffects": false
+}

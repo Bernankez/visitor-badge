@@ -1,3 +1,4 @@
 {
-  "extends": "@bernankez"
+  "extends": "@bernankez",
+  "ignorePatterns": ["api"]
 }

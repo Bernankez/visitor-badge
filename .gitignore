@@ -4,6 +4,7 @@
 *.log
 *.tgz
 *.env
+dist
 coverage
 lib-cov
 logs

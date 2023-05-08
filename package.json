@@ -22,7 +22,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "unbuild",
-    "postbuild": "git add dist",
+    "postbuild": "git add api",
     "dev": "tsx --watch src/index.ts",
     "prepublishOnly": "npm run build",
     "release": "bumpp",

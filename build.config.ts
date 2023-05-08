@@ -5,7 +5,7 @@ export default defineBuildConfig({
     {
       builder: "mkdist",
       input: "./src",
-      outDir: "./dist",
+      outDir: "./api",
       format: "cjs",
       ext: "cjs",
     },

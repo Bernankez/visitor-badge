@@ -2,15 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "functions": {
-    "dist/index.cjs": {
+    "api/index.cjs": {
       "runtime": "@vercel/node@2.14.1",
-      "includeFiles": "dist/**/*"
+      "includeFiles": "api/**/*"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "dist/index.cjs"
+      "destination": "api/index.cjs"
     }
   ]
 }

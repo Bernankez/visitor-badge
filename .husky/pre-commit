@@ -3,4 +3,3 @@
 
 npx lint-staged
 npx vitest run --passWithNoTests
-npx tsup

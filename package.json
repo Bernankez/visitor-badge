@@ -40,7 +40,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "tsup",
-    "dev": "tsx --watch src/index.ts",
+    "watch": "tsup --watch src/index.ts",
+    "dev": "tsx --watch api/index.js",
     "prepublishOnly": "npm run build",
     "release": "bumpp",
     "start": "tsx src/index.ts",

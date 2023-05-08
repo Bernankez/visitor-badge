@@ -6,8 +6,11 @@ export default defineConfig({
   clean: true,
   format: ["cjs"],
   shims: true,
-  treeshake: true,
   minify: true,
+  treeshake: true,
+  loader: {
+    ".svg": "dataurl",
+  },
   outExtension({ format }) {
     return {
       js: `.${format === "cjs" ? "js" : format}`,

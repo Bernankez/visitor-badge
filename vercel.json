@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "functions": {
-    "dist/index.cjs": {
-      "runtime": "@vercel/node@2.14.1",
-      "includeFiles": ["dist/**/*"]
+  "builds": [
+    {
+      "src": "dist/index.cjs",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
     }
-  },
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",

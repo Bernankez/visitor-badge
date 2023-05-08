@@ -3,9 +3,7 @@
   "functions": {
     "dist/index.cjs": {
       "runtime": "@vercel/node@2.14.1",
-      "config": {
-        "includeFiles": ["dist/**"]
-      }
+      "includeFiles": ["dist/**"]
     }
   },
   "rewrites": [

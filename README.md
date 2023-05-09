@@ -1,4 +1,7 @@
 # Visitor Badge
+[![CI](https://github.com/Bernankez/visitor-badge/workflows/CI/badge.svg)](https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/actions)
+![LICENSE](https://shields.io/github/license/Bernankez/visitor-badge)
+![tag](https://shields.io/github/v/tag/Bernankez/visitor-badge?sort=semver)
 
 ![visitor badge](https://badge.keke.cc/api/github.com/example) `![visitor badge](https://badge.keke.cc/api/github.com/example)`
 
@@ -13,7 +16,7 @@ GitHub上已经有很多Visitor Badge了，大部分的样式是一个黑色的B
 
 链接格式为
 ```
-https://example.com/api/namespace/key
+https://example.com/api/:namespace/:key
 ```
 
 其中`namespace` 和`key` 为自定义部分，`example.com`为你的域名。`namespace` + `key`共同标志一个唯一的Badge。有15秒的缓存，即15秒内的重复访问不会重复计数。

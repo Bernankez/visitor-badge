@@ -90,7 +90,7 @@ pnpm dev
 
 [utils/renderSVG.ts](./src/utils/renderSVG.ts) 渲染Badge。
 
-[utils/load-config](./src/utils/load-config) .env文件处理。
+[utils/load-config.ts](./src/utils/load-config.ts) .env文件处理。
 
 ## 参考文档
 

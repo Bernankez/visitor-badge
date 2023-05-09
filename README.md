@@ -78,7 +78,7 @@ pnpm dev
 
 很大概率你需要改动这些文件以适应自己的需求。
 
-[api/index.ts](./src/api.index.ts) 包含路由，namespace + key的合法性验证。
+[api/index.ts](./src/api/index.ts) 包含路由，namespace + key的合法性验证。
 
 [assets](./src/assets) svg头像。
 

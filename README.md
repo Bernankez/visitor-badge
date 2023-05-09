@@ -1,6 +1,6 @@
 # Visitor Badge
 
-![visitor badge](https://badge.keke.cc/api/github.com/example)
+![visitor badge](https://badge.keke.cc/api/github.com/example) `![visitor badge](https://badge.keke.cc/api/github.com/example)`
 
 ⬆️ 一个简单的访客记录
 

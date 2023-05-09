@@ -1,7 +1,8 @@
 # Visitor Badge
+
+[![tag](https://shields.io/github/v/tag/Bernankez/visitor-badge?sort=semver)](https://github.com/Bernankez/visitor-badge/releases)
 [![CI](https://github.com/Bernankez/visitor-badge/workflows/CI/badge.svg)](https://github.com/Bernankez/visitor-badge/actions)
 [![LICENSE](https://shields.io/github/license/Bernankez/visitor-badge)](https://github.com/Bernankez/visitor-badge/blob/master/LICENSE)
-[![tag](https://shields.io/github/v/tag/Bernankez/visitor-badge?sort=semver)](https://github.com/Bernankez/visitor-badge/releases)
 
 ![visitor badge](https://badge.keke.cc/api/github.com/example) `![visitor badge](https://badge.keke.cc/api/github.com/example)`
 

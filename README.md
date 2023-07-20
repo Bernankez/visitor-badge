@@ -74,6 +74,8 @@ pnpm install
 pnpm dev
 ```
 
+访问 `localhost:3000/api/test/a` 即可看到效果
+
 ### 打包
 
 会在commit时自动执行打包命令，你也可以手动运行`pnpm build`打包。

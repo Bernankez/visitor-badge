@@ -37,7 +37,8 @@ https://example.com/api/:namespace/:key
 
 ## 部署
 
-> **Note**: 部署之前你需要先准备一个自己的MongoDB云数据库。我目前用的是[Mongodb Atlas](https://www.mongodb.com/atlas)，你也可以选择其他的，比如[Railway](https://railway.app/)。
+> [!NOTE]
+> 部署之前你需要先准备一个自己的MongoDB云数据库。我目前用的是[Mongodb Atlas](https://www.mongodb.com/atlas)，你也可以选择其他的，比如[Railway](https://railway.app/)。
 
 ### 部署到Vercel
 

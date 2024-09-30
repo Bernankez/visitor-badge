@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.renderSVG = renderSVG;
-var _svgdom = require("svgdom");
 var _svg = require("@svgdotjs/svg.js");
+var _svgdom = require("svgdom");
 var _avatar = require("./avatar.cjs");
 function render(el, width, height) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>

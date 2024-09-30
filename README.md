@@ -34,7 +34,6 @@ https://example.com/api/:namespace/:key
 >
 > sub.abc.com -> https://example.com/api/sub.abc.com/key
 
-
 ## 部署
 
 > [!NOTE]

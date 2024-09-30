@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.resolveAvatar = resolveAvatar;
 var _nodeFs = require("node:fs");
 var _nodePath = require("node:path");
-var _utils = require("@bernankez/utils");
+var _node = require("@bernankez/utils/node");
 const {
   __dirname: _dirname
-} = (0, _utils.resolvePath)(require('url').pathToFileURL(__filename).toString());
+} = (0, _node.resolvePath)(require('url').pathToFileURL(__filename).toString());
 function resolveAvatar(x = 0, y = 0, width = 64, height = 64) {
   const avatarPath = (0, _nodePath.resolve)(_dirname, "../assets/avatar.svg");
   const MIME = "image/svg+xml";

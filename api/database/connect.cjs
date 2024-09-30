@@ -7,7 +7,7 @@ exports.connect = connect;
 exports.disconnect = disconnect;
 var _mongoose = _interopRequireDefault(require("mongoose"));
 var _loadConfig = require("../utils/load-config.cjs");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 let globalMongoose;
 async function connect() {
   const {

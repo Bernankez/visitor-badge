@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { resolvePath } from "@bernankez/utils";
+import { resolvePath } from "@bernankez/utils/node";
 
 const { __dirname } = resolvePath(import.meta.url);
 

@@ -1,5 +1,5 @@
-import type { RequestHeaders } from "h3";
 import mongoose, { Schema } from "mongoose";
+import type { RequestHeaders } from "h3";
 
 const logSchema = new Schema({
   hash: { type: String, required: true },

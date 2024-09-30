@@ -1,7 +1,7 @@
+import { registerWindow, SVG } from "@svgdotjs/svg.js";
 // @ts-expect-error no type definitions
 import { createSVGWindow } from "svgdom";
 import type { Svg } from "@svgdotjs/svg.js";
-import { SVG, registerWindow } from "@svgdotjs/svg.js";
 import { resolveAvatar } from "./avatar";
 
 function render(el: string[], width: number, height: number) {
@@ -28,7 +28,7 @@ export function renderSVG(count: number) {
   const document = window.document;
   registerWindow(window, document);
 
-  const canvas = (SVG(document.documentElement) as Svg);
+  const canvas = SVG(document.documentElement) as Svg;
   const text = canvas.plain(`Visited: ${count} times`);
   text.attr({
     // see https://www.zhihu.com/question/58620241

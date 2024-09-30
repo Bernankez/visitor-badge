@@ -1,9 +1,9 @@
-import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
 import { isDefined } from "@bernankez/utils";
-import { getCache } from "../utils/cache";
+import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
 import { increment } from "../database/service";
-import { renderSVG } from "../utils/renderSVG";
+import { getCache } from "../utils/cache";
 import { handleHeader } from "../utils/header";
+import { renderSVG } from "../utils/renderSVG";
 
 export function createRouter() {
   const router = createRouterH3().get("/api/**", eventHandler(async (event) => {
@@ -43,4 +43,3 @@ export function createRouter() {
   }));
   return router;
 }
-

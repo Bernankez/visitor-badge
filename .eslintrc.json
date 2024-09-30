@@ -1,4 +1,0 @@
-{
-  "extends": "@bernankez",
-  "ignorePatterns": ["api", "*.svg"]
-}

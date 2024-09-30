@@ -1,3 +1,4 @@
+import process from "node:process";
 import { loadConfig as _loadConfig } from "c12";
 
 export async function loadConfig() {

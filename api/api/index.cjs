@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createRouter = createRouter;
-var _h = require("h3");
 var _utils = require("@bernankez/utils");
-var _cache = require("../utils/cache.cjs");
+var _h = require("h3");
 var _service = require("../database/service.cjs");
-var _renderSVG = require("../utils/renderSVG.cjs");
+var _cache = require("../utils/cache.cjs");
 var _header = require("../utils/header.cjs");
+var _renderSVG = require("../utils/renderSVG.cjs");
 function createRouter() {
   const router = (0, _h.createRouter)().get("/api/**", (0, _h.eventHandler)(async event => {
     const headers = (0, _h.getHeaders)(event);

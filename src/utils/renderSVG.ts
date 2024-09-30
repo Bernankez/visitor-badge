@@ -1,8 +1,9 @@
 import { registerWindow, SVG } from "@svgdotjs/svg.js";
-// @ts-expect-error no type definitions
-import { createSVGWindow } from "svgdom";
 import type { Svg } from "@svgdotjs/svg.js";
 import { resolveAvatar } from "./avatar";
+
+// @ts-expect-error no type definitions
+const { createSVGWindow } = await import("svgdom");
 
 function render(el: string[], width: number, height: number) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>

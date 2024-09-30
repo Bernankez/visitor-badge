@@ -5,8 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.renderSVG = renderSVG;
 var _svg = require("@svgdotjs/svg.js");
-var _svgdom = require("svgdom");
 var _avatar = require("./avatar.cjs");
+const {
+  createSVGWindow
+} = await Promise.resolve().then(() => require("svgdom"));
 function render(el, width, height) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <svg width="${width}" height="${height}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -26,7 +28,7 @@ function render(el, width, height) {
   return svg;
 }
 function renderSVG(count) {
-  const window = (0, _svgdom.createSVGWindow)();
+  const window = createSVGWindow();
   const document = window.document;
   (0, _svg.registerWindow)(window, document);
   const canvas = (0, _svg.SVG)(document.documentElement);

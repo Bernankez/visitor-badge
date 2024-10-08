@@ -36,7 +36,7 @@ export async function renderSVG(count: number) {
   }).fill("#c14344").font({
     family: "DejaVu Sans,Verdana,Geneva,sans-serif",
     size: 16,
-  });
+  }).move(70, 28);
 
   const avatar = resolveAvatar();
 

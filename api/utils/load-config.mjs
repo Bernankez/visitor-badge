@@ -1,14 +1,7 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loadConfig = loadConfig;
-var _nodeProcess = _interopRequireDefault(require("node:process"));
-var _c = require("c12");
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-async function loadConfig() {
-  await (0, _c.loadConfig)({
+import process from "node:process";
+import { loadConfig as _loadConfig } from "c12";
+export async function loadConfig() {
+  await _loadConfig({
     dotenv: true
   });
   const {
@@ -18,7 +11,7 @@ async function loadConfig() {
     MONGODB_USER: mongodbUser,
     MONGODB_PASSWORD: mongodbPassword,
     MONGODB_SRV: mongodbSRV = "false"
-  } = _nodeProcess.default.env;
+  } = process.env;
   return {
     mongodbDatabase,
     mongodbHost,

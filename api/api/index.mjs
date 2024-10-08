@@ -1,10 +1,9 @@
 import { isDefined } from "@bernankez/utils";
 import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
-import { increment } from "../database/service";
-import { getCache } from "../utils/cache";
-import { handleHeader } from "../utils/header";
-import { renderSVG } from "../utils/renderSVG";
-
+import { increment } from "../database/service.mjs";
+import { getCache } from "../utils/cache.mjs";
+import { handleHeader } from "../utils/header.mjs";
+import { renderSVG } from "../utils/renderSVG.mjs";
 export function createRouter() {
   const router = createRouterH3().get("/api/**", eventHandler(async (event) => {
     const headers = getHeaders(event);
@@ -12,27 +11,25 @@ export function createRouter() {
     if (!namespace) {
       throw createError({
         statusCode: 400,
-        statusMessage: "namespace is required",
+        statusMessage: "namespace is required"
       });
     } else if (!key) {
       throw createError({
         statusCode: 400,
-        statusMessage: "key is required",
+        statusMessage: "key is required"
       });
     }
-    let count: number | undefined;
-    count = getCache<number>(namespace, key);
+    let count;
+    count = getCache(namespace, key);
     if (!isDefined(count)) {
       const referer = headers.referer;
       if (referer) {
-        // namespace need to fit hostname
-        // eg. www.example.com. namespace should be example.com
         const refererUrl = new URL(referer);
         const hostname = refererUrl.hostname.replace("www.", "");
         if (namespace !== hostname) {
           throw createError({
             statusCode: 401,
-            statusMessage: "unauthorized",
+            statusMessage: "unauthorized"
           });
         }
       }

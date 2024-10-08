@@ -2,9 +2,6 @@ import { registerWindow, SVG } from "@svgdotjs/svg.js";
 import type { Svg } from "@svgdotjs/svg.js";
 import { resolveAvatar } from "./avatar";
 
-// @ts-expect-error no type definitions
-const { createSVGWindow } = await import("svgdom");
-
 function render(el: string[], width: number, height: number) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <svg width="${width}" height="${height}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,7 +21,9 @@ function render(el: string[], width: number, height: number) {
   return svg;
 }
 
-export function renderSVG(count: number) {
+export async function renderSVG(count: number) {
+  // @ts-expect-error no type definitions
+  const { createSVGWindow } = await import("svgdom");
   const window = createSVGWindow();
   const document = window.document;
   registerWindow(window, document);

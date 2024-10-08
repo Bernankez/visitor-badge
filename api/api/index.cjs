@@ -42,7 +42,7 @@ function createRouter() {
       count = await (0, _service.increment)(namespace, key, headers);
     }
     (0, _header.handleHeader)(event);
-    return (0, _renderSVG.renderSVG)(count);
+    return await (0, _renderSVG.renderSVG)(count);
   }));
   return router;
 }

@@ -39,7 +39,7 @@ export function createRouter() {
       count = await increment(namespace, key, headers);
     }
     handleHeader(event);
-    return renderSVG(count);
+    return await renderSVG(count);
   }));
   return router;
 }

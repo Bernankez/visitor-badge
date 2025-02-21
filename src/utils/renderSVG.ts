@@ -1,5 +1,5 @@
-import { registerWindow, SVG } from "@svgdotjs/svg.js";
 import type { Svg } from "@svgdotjs/svg.js";
+import { registerWindow, SVG } from "@svgdotjs/svg.js";
 import { resolveAvatar } from "./avatar";
 
 function render(el: string[], width: number, height: number) {

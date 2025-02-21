@@ -1,12 +1,12 @@
 import { isDefined } from "@bernankez/utils";
-import { createError, createRouter as createRouterH3, eventHandler, getHeaders } from "h3";
+import { createError, createRouter, eventHandler, getHeaders } from "h3";
 import { increment } from "../database/service";
 import { getCache } from "../utils/cache";
 import { handleHeader } from "../utils/header";
 import { renderSVG } from "../utils/renderSVG";
 
-export function createRouter() {
-  const router = createRouterH3().get("/api/**", eventHandler(async (event) => {
+export function createAppRoute() {
+  const router = createRouter().get("/api/**", eventHandler(async (event) => {
     const headers = getHeaders(event);
     const [namespace, key] = event.context.params?._?.split("/") ?? [];
     if (!namespace) {

@@ -1,5 +1,5 @@
-import { setHeaders } from "h3";
 import type { H3Event } from "h3";
+import { setHeaders } from "h3";
 
 export function handleHeader(event: H3Event) {
   // not to cache images
